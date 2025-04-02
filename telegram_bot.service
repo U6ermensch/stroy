@@ -1,0 +1,16 @@
+[Unit]
+Description=Telegram Bot Service
+After=network.target
+
+[Service]
+Type=simple
+User=romanzdanov
+WorkingDirectory=/Users/romanzdanov/Desktop/строительный
+ExecStart=/usr/bin/python3 bot.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/Users/romanzdanov/Desktop/строительный/bot.log
+StandardError=append:/Users/romanzdanov/Desktop/строительный/bot.log
+
+[Install]
+WantedBy=multi-user.target 
